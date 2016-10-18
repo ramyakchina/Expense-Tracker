@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Expense Manager</title> 
+    <link rel="stylesheet" href="mystyle.css" />
+    <script src="angular.min.js"></script>
+    <script src="angular-route.min.js"></script>
+    <script src="myApp.js"></script>
+</head>
+<body ng-controller="homeController">
+    <h1>Expense Manager</h1>
+    <img class="bg-image" alt="backgroundImage" src="http://lorempixel.com/1024/768/business/">
+    <div class="container">
+           <div class="page-slide" ng-class="direction" ng-view></div>
+    </div> 
+</body>
+</html>

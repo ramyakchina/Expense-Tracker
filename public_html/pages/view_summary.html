@@ -1,0 +1,23 @@
+<div id="details">
+    <div class="row">
+            <h2>Expense Details</h2>
+         
+    </div>
+    <div class="row">
+        <form id="removeForm" name="removeForm" novalidate >
+            <div class="exp-details" ng-repeat="expense in expenses">
+                <div class="col-sm-1">{{$index+1}}</div>
+                <div class="col-sm-3">{{expense.category}}</div>
+                <div class="col-sm-4">{{expense.description}}</div>
+                <div class="col-sm-2">{{expense.amount| currency:"$"}}</div>
+                <button ng-enabled="true" ng-click="remove(expense.key); reloadPage();">Remove</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="summary">
+    <h2>Expense Summary</h2>
+    <div ng-repeat="sum in summaryData">
+        <div>{{sum.category}} - {{sum.amount}}</div>
+    </div>
+</div>
